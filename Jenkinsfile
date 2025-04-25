@@ -33,7 +33,7 @@ pipeline {
         withCredentials([usernamePassword(credentialsId: 'TomcatCreds', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
             sh '''
                 curl -v --upload-file target/*.war \
-                "http://$USER:$PASS@54.167.173.84:8080/manager/text/deploy?path=/controlplane&update=true"
+                "http://$USER:$PASS@54.167.173.84:8080/manager/text/deploy?path=/NithinApp&update=true"
             '''
         }
     }
